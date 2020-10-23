@@ -2,7 +2,7 @@
 
 a simple project that uses jQuery to add my skills to a list
 
-## Techonoigies Used
+## Technologies Used
 -HTML5
 -CSS3
 -JavaScript
