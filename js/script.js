@@ -21,12 +21,12 @@ function init() {
 }
 
 function handleAddSkill() {
-    // Store valut from the input tag insde a local variable
+    // Store value from the input tag insde a local variable
     const skill = $input.val();
     // Check to make sure we have skill data
     if(skill) {
         // Create UI for skill
-        const $skill = $(`<li><span>X</span>JavaScript (ES6)</li>`)
+        const $skill = $(`<li><span>X</span>${skill}</li>`)
         // Push the skill UI into the skills list
         skills.push($skill);
         // Clear the input tag's value
@@ -38,7 +38,13 @@ function handleAddSkill() {
 }
 
 function handleDelete() {
-    alert('Elements inside of ul tag clicked');
+    
+    $('main ul').on('click', 'span',function(){
+        $(this).closest('li').fadeOut(2000,function(){
+            $(this).remove();
+        });
+    });
+    
 }
 
 function render() {
